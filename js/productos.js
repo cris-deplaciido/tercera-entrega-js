@@ -33,7 +33,7 @@ const productos = [
     },
     {
         id: 5,
-        nombre: "mesa",
+        nombre: "",
         precio:Math.round(10.000) ,
         img:
         "https://http2.mlstatic.com/D_NQ_NP_997036-MLA45155211566_032021-O.webp",
@@ -41,7 +41,7 @@ const productos = [
     },
     {
         id: 6,
-        nombre: "mesa",
+        nombre: "",
         precio:Math.round(10.000) ,
         img:
         "https://http2.mlstatic.com/D_NQ_NP_997036-MLA45155211566_032021-O.webp",
@@ -49,7 +49,7 @@ const productos = [
     },
     {
         id: 7,
-        nombre: "mesa",
+        nombre: "",
         precio:Math.round(10.000) ,
         img:
         "https://http2.mlstatic.com/D_NQ_NP_997036-MLA45155211566_032021-O.webp",
@@ -57,7 +57,7 @@ const productos = [
     },
     {
         id: 8,
-        nombre: "mesa",
+        nombre: "",
         precio:Math.round(10.000) ,
         img:
         "https://http2.mlstatic.com/D_NQ_NP_997036-MLA45155211566_032021-O.webp",

@@ -158,3 +158,16 @@ modal-header-button {
 .delete-product {
     cursor: pointer;
 }
+
+/*Contador-carrito*/
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: none;
+}
