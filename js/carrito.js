@@ -26,11 +26,29 @@ const styleCarrito = ()  => {
         <img src="${muebles.img}">
         <h3>${muebles.nombre}</h3>
         <p>${muebles.precio} $</p>
+        <span class="restar"> - </span>
         <p>Cantidad: ${muebles.cantidad}</p>
+        <span class="sumar"> + </span>
         <p>Total: ${muebles.cantidad * muebles.precio}</p>
         `;
 
         modalContainer.append(carritoContent);
+
+        let restar = carritoContent.querySelector(".restar")
+
+        restar.addEventListener("click", () => {
+        if(muebles.cantidad !== 1){ 
+        muebles.cantidad--;
+        }
+        styleCarrito();
+        });
+
+        let sumar = carritoContent.querySelector(".sumar");
+        sumar.addEventListener("click", () => {
+            muebles.cantidad++;
+            styleCarrito();
+        });
+
 
         let eliminar = document.createElement("span");
         eliminar.innerText = "❌";
@@ -56,7 +74,8 @@ const eliminarProducto = () => {
     carrito = carrito.filter((carritoId) => {
         return carritoId !== buscarProducto;
     });
-
+    contadorCarrito();
+    guardarLocales();
     styleCarrito();
 };
 
@@ -64,5 +83,12 @@ const eliminarProducto = () => {
 
 const contadorCarrito = () => {
     cantidadCarrito.style.display = "block";
-    cantidadCarrito.innerText = carrito.length; 
-}
+
+    const carritoLenght = carrito.length;
+
+    localStorage.setItem("carritoLenght", JSON.stringify(carritoLenght))
+
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLenght")); 
+};
+
+contadorCarrito();

@@ -6,7 +6,7 @@ const verCarrito  = document.getElementById("verCarrito");
 const modalContainer = document.getElementById("modal-container");
 const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("objetos")) || [];
 
 productos.forEach((muebles) => {
     let contenido = document.createElement("div");
@@ -14,7 +14,7 @@ productos.forEach((muebles) => {
     contenido.innerHTML = `
     <img src="${muebles.img}">
     <h3>${muebles.nombre}</h3>
-    <p class="precio">${muebles.precio} $</p>
+    <p class="precio"> $ ${muebles.precio} </p>
     `;
 
     shopContent.append(contenido); 
@@ -46,6 +46,12 @@ productos.forEach((muebles) => {
     }
     console.log(carrito);
     contadorCarrito();
+    guardarLocales();
     });
 }); 
+
+const guardarLocales = () => {
+    localStorage.setItem("objetos", JSON.stringify (carrito));
+};
+
 
