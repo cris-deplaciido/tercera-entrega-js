@@ -40,12 +40,14 @@ const styleCarrito = ()  => {
         if(muebles.cantidad !== 1){ 
         muebles.cantidad--;
         }
+        guardarLocales();
         styleCarrito();
         });
 
         let sumar = carritoContent.querySelector(".sumar");
         sumar.addEventListener("click", () => {
             muebles.cantidad++;
+            guardarLocales();
             styleCarrito();
         });
 

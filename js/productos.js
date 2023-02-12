@@ -36,7 +36,7 @@ const productos = [
         nombre: "placar puertas corredizas",
         precio: 13000,
         img:
-        "https://http2.mlstatic.com/D_NQ_NP_688278-MLA45257170053_032021-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_858101-MLA42452741320_072020-O.webp",
         cantidad: 1,
     },
     {
@@ -60,7 +60,7 @@ const productos = [
         nombre: "mesa tv",
         precio: 7000,
         img:
-        "https://http2.mlstatic.com/D_NQ_NP_756499-MLA50240015773_062022-O.webp",
+        "https://http2.mlstatic.com/D_NQ_NP_722150-MLA45190426138_032021-O.webp",
         cantidad: 1,
     },
 ];
