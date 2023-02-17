@@ -8,9 +8,17 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 let carrito = JSON.parse(localStorage.getItem("objetos")) || [];
 
+const getProducts = async ()  => {
+    const response = await fetch("data.json");
+    const data = await response.json();
+    console.log(data);
+};
+
+getProducts();
+
 productos.forEach((muebles) => {
     let contenido = document.createElement("div");
-    contenido.className = "card"
+    contenido.className = "card "
     contenido.innerHTML = `
     <img src="${muebles.img}">
     <h3>${muebles.nombre}</h3>
