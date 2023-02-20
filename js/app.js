@@ -14,7 +14,7 @@ const tomarProductos = async ()  => {
     
     data.forEach((muebles) => {
         let contenido = document.createElement("div");
-        contenido.className = "card "
+        contenido.className = "card col-12 col-md-6 col-lg-3"
         contenido.innerHTML = `
         <img src="${muebles.img}">
         <h3>${muebles.nombre}</h3>
